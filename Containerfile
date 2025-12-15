@@ -2,7 +2,13 @@ FROM osrf/ros:humble-desktop-full
 
 ENV DEBIAN_FRONTEND=noninteravtive
 
-RUN apt-get update && apt-get install -y tmux git
+RUN apt-get update && apt-get install -y \
+    tmux git bash apt-utils bc curl dialog \
+    diffutils findutils gnupg2 less \
+    libnss-myhostname libvte-2.9[0-9]-common \
+    libvte-common lsof ncurses-base0 passwd \
+    pinentry-curses procps sudo time wget \
+    util-linux
 
 RUN apt-get install -y \
     mesa-utils \
