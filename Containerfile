@@ -21,6 +21,7 @@ RUN echo "set -g mouse on" >> /etc/tmux.conf && \
 
 RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc && \
     echo "source /usr/share/gazebo/setup.sh" >> /etc/bash.bashrc && \
-    echo "export TURTLEBOT3_MODEL=waffle_pi" >> /etc/bash.bashrc
+    echo "export TURTLEBOT3_MODEL=waffle_pi" >> /etc/bash.bashrc && \
+    echo "PS1=[HUMBLE] \$PS1"
 
 ENV DEBIAN_FRONTEND=dialog
