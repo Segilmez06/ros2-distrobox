@@ -2,8 +2,9 @@ FROM osrf/ros:humble-desktop-full
 
 ENV DEBIAN_FRONTEND=noninteravtive
 
-RUN apt-get update && apt-get install -y \
-    tmux git \
+RUN apt-get update && apt-get install -y tmux git
+
+RUN apt-get install -y \
     mesa-utils \
     python3-colcon-common-extensions \
     ros-humble-navigation2 \
